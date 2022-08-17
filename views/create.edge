@@ -1,0 +1,34 @@
+@layout('layouts.app')
+@section('content')
+        <header>
+            <h1 class="site-heading text-center text-faded d-none d-lg-block">
+                <span class="site-heading-upper text-primary mb-3">Add Car</span>
+            </h1>
+        </header>
+        <div class="container">
+        <div class="row">
+            <div class="col-lg-6 offset-lg-3">
+                <form action="/posts/new" method="POST">
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">Username</label>
+                        <input name="username" type="text" class="form-control" id="exampleFormControlInput1" placeholder="Username" required>
+                      </div>
+                      <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">Title</label>
+                        <input name="title" type="text" class="form-control" id="exampleFormControlInput1" placeholder="Title" required>
+                      </div>
+                      <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">Description</label>
+                        <input name="descr" type="text" class="form-control" id="exampleFormControlInput1" placeholder="Description" required>
+                      </div>
+                      <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">Image</label>
+                        <input name="img" type="text" class="form-control" id="exampleFormControlInput1" placeholder="Image" required>
+                      </div>
+                      <button type="submit" class="btn btn-success">Submit</button>
+                </form>
+            </div>
+
+    </div>
+</div>
+@endsection

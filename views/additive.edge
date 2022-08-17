@@ -1,0 +1,22 @@
+@layout('layouts.app')
+@section('content')
+            <h1 class="site-heading text-center text-faded d-none d-lg-block">
+                <span class="site-heading-upper text-secondary mb-3">Comment</span></h1>
+      <div class="container">
+        <div class="row">
+            <div class="col-lg-6 offset-lg-3">
+              <form action="/comment/enter" method="POST">
+      <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Title</label>
+        <input name="title" type="text" class="form-control" id="exampleFormControlInput1" placeholder="Enter title" required>
+      </div>
+      <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Username</label>
+        <input name="user" type="text" class="form-control" id="exampleFormControlInput1" placeholder="Enter Username" required>
+      </div>
+      <button type="submit" class="btn btn-light">Submit</button>
+              </form>
+            </div>
+        </div>
+      </div>
+@endsection

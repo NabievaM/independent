@@ -1,0 +1,33 @@
+@layout('layouts.app')
+@section('content')
+    <header>
+        <h1 class="site-heading text-center text-faded d-none d-lg-block">
+            <span class="site-heading-upper text-primary mb-3">Store of Cars</span>
+        </h1>
+    </header>
+    <div class="waves-block">
+        <div class="row">
+             @each(post in posts)
+             <div class="col-lg-4">
+                <div class="card" style="width: 25rem;">
+                 <img src="{{post.img}}" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">{{post.title}}</h5>
+                  <p>{{post.descr}}</p>
+                  <h4>{{post.username}}</h4>
+                  <h6>{{post.createdAt}}</h6>
+                </div>
+                <div class="card-action actions">
+                  <a href="/store/{{post.id}}/edit?allow=true" class="btn btn-info">Edit</a>
+                  <form action="/store/remove" method="POST">
+                    <input type="hidden" name="mukhlis" value="{{post.id}}">
+                    <button class="btn btn-danger">Remove</button>
+                  </form>
+                  
+                </div>
+              </div>
+             </div>
+              @endeach
+        </div>
+     </div>
+@endsection

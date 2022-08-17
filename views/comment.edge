@@ -1,0 +1,20 @@
+@layout('layouts.app')
+@section('content')
+<header>
+    <h1 class="site-heading text-center text-faded d-none d-lg-block">
+        <span class="site-heading-upper text-primary mb-3">Your Comment</span>
+    </h1>
+</header>
+<div class="waves-block">
+  <div class="row">
+    <div class="col-lg-6 offset-lg-3">
+      @each(comment in comments)
+      <div class="alert alert-warning" role="alert">
+        <h5>{{comment.title}}</h5>
+        <h4><p>{{comment.user}}</p></h4>
+      </div>
+      @endeach
+    </div>
+  </div>
+</div>
+@endsection
